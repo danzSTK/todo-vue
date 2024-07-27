@@ -82,8 +82,8 @@ const estado = reactive({
     </form>
 
     
-    <ul class="list-group mt-3" v-for="tarefa in getTarefasFiltradas()">
-      <li class="list-group-item">
+    <ul class="list-group mt-4">
+      <li class="list-group-item mb-2"  v-for="tarefa in getTarefasFiltradas()">
         <input @change="evento => tarefa.finalizado =  evento.target.checked" :checked="tarefa.finalizado" :id="tarefa.titulo" type="checkbox">
         
         <label :class="{ done: tarefa.finalizado}" for="tarefa.titulo" class="ms-3">
